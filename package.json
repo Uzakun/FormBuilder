@@ -1,17 +1,12 @@
 {
   "name": "form-builder-mern",
   "version": "1.0.0",
-  "description": "MERN Stack Form Builder with Categorize, Cloze, and Comprehension questions",
   "scripts": {
-    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
-    "build": "cd client && npm run build",
+    "build": "cd client && npm install && npm run build",
     "start": "cd server && npm start",
-    "install-all": "npm install && cd client && npm install && cd ../server && npm install"
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\""
   },
   "devDependencies": {
     "concurrently": "^8.2.0"
-  },
-  "keywords": ["form-builder", "mern", "react", "express", "mongodb"],
-  "author": "Your Name",
-  "license": "MIT"
+  }
 }

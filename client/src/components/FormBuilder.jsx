@@ -1,18 +1,20 @@
 import axios from "axios";
 import {
-    ChevronDown,
-    ChevronUp,
-    Edit3,
-    Eye,
-    GripVertical,
-    Plus,
-    Save,
-    Trash2,
-    X
+  ChevronDown,
+  ChevronUp,
+  Edit3,
+  Eye,
+  GripVertical,
+  Plus,
+  Save,
+  Trash2,
+  X
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const API_BASE = import.meta.env.PROD ? "/api" : "http://localhost:5000/api";
+const API_BASE = typeof window !== 'undefined' && window.location.origin.includes('vercel.app') 
+  ? '/api' 
+  : 'http://localhost:5000/api';
 
 const FormBuilder = () => {
   const [currentView, setCurrentView] = useState("dashboard");
